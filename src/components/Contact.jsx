@@ -15,8 +15,45 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handlechange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handlechange = (e) => {
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        'service_00ogulp',
+        'template_wri5hoe',
+        {
+          from_name: form.name,
+          to_name: 'Adrian',
+          from_email: form.email,
+          to_email: 'singhaditya1503@gmail.com',
+          message: form.message,
+        },
+        'ECMVZMKh_fAskemb2'
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert('Thank You. I will get back to you as soon as possible.');
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert('Something went wrong.')
+        }
+      );
+  };
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
@@ -58,7 +95,7 @@ const Contact = () => {
             <textarea
               rows='7'
               name='message'
-              value={form.name}
+              value={form.message}
               onChange={handlechange}
               placeholder='What do you want to say?'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none  border-none font-medium'
@@ -72,7 +109,7 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-      
+
       <motion.div
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px] '
