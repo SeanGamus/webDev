@@ -37,19 +37,17 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-3xl leading-[30px] "
+        className="mt-4 mb-4 text-secondary text-[17px] max-3xl leading-[30px] "
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium et
-        incidunt, corrupti dolorum suscipit odit animi? Amet excepturi sint
-        debitis, ratione perferendis repellendus facere a autem nemo eos dicta
-        magni numquam nesciunt esse totam expedita nisi, nostrum eum error at
-        id. Dolorum illo cupiditate ad maiores! Provident, commodi veritatis.
-        Neque harum doloribus dolores quidem maxime ipsum cum veritatis animi
-        facilis quam? Natus corporis ab reprehenderit. Cumque laudantium ad
-        dolores sint officiis enim dolorum ut quasi ratione facere ipsam neque
-        sed, similique obcaecati modi magni deleniti recusandae aspernatur! Nisi
-        totam eligendi quisquam, natus ab ullam impedit quasi libero labore
-        ipsam minus?
+        Hey there! I'm a passionate web developer with a knack for crafting
+        elegant, user-friendly websites. I specialize in turning ideas into
+        reality through a combination of creativity and technical expertise. My
+        expertise lies in front-end and back-end development, meaning I'm
+        proficient in both the visual aspects of website design and the
+        behind-the-scenes functionality that makes everything work smoothly.
+        Whether it's creating responsive layouts, optimizing performance, or
+        integrating complex features, I thrive on the challenge of bringing
+        digital visions to life.
       </motion.p>
 
       <div className="empty-20 flex flex-wrap gap-10">
