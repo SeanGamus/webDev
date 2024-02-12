@@ -132,7 +132,7 @@ const experiences = [
     company_name: "Kantar",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Feb 2021 - Present",
+    date: "Feb 2022 - Present",
     points: [
       "Developing and maintaining web applications using Angular.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
